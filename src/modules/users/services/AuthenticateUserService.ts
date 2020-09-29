@@ -1,6 +1,7 @@
+import { injectable, inject } from 'tsyringe';
+
 import { sign } from 'jsonwebtoken';
 import authConfig from '@config/auth';
-import { injectable, inject } from 'tsyringe';
 
 import AppError from '@shared/errors/AppError';
 
