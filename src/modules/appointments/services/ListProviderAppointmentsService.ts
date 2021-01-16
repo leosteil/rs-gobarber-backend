@@ -30,7 +30,7 @@ class ListProviderAppointmentsService {
     }: Request): Promise<Appointment[]> {
         const cacheKey = `provider-appointment:${provider_id}:${year}-${month}-${day}`;
 
-        const appointments = await this.cacheProvider.recover<Appointment[]>(
+        let appointments = await this.cacheProvider.recover<Appointment[]>(
             cacheKey,
         );
 
